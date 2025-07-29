@@ -4,10 +4,16 @@ error_reporting(E_ALL);
 
 require_once("config.php");
 
-$sql = new Sql();
+$root = new Usuario();
+
+$root->loadbyId(3);
+
+echo $root;
+
+/*$sql = new Sql();
 
 $usuarios = $sql->select("SELECT * FROM tb_usuarios");
 //para funcionar substitui query por select
-echo json_encode($usuarios);
+echo json_encode($usuarios);*/
 
 ?>

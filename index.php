@@ -4,16 +4,33 @@ error_reporting(E_ALL);
 
 require_once("config.php");
 
-$root = new Usuario();
+//carrega um usuario
+//$root = new Usuario();
 
-$root->loadbyId(3);
+//$root->loadbyId(3);
 
-echo $root;
+//echo $root;
 
 /*$sql = new Sql();
 
 $usuarios = $sql->select("SELECT * FROM tb_usuarios");
 //para funcionar substitui query por select
 echo json_encode($usuarios);*/
+
+//carrega uma lista de usuarios
+//$lista = Usuario::getList();
+
+//echo json_encode($lista);
+
+//Carrega uma lista de usuarios buscando pelo login 
+//$search = Usuario::search("fe");
+
+//echo json_encode($search);
+
+//carrega um usuario usando o login e a senha 
+$usuario = new Usuario();
+$usuario->login("feijão","!@#$%3123");
+
+echo $usuario;
 
 ?>
